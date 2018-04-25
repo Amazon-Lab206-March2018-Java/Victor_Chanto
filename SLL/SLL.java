@@ -32,9 +32,9 @@ public class SLL{
 
     public void remove(){
         Node pointer = this.head;
-        while(pointer.getnext()!=null){
+        while(pointer.getnext().getnext()!=null){
             pointer=pointer.getnext();
         }
-        pointer = null;
+        pointer.setnext(null);
     }
 }
