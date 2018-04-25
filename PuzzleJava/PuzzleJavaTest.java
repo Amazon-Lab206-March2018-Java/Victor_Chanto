@@ -6,7 +6,11 @@ public class PuzzleJavaTest {
         // System.out.println(test.greaterTen(x));
         // String[] y = {"Nancy", "Jinichi", "Fujibayashi", "Momochi", "Ishikawa"};
         // System.out.println(test.names(y));
-        String[] a = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
-        System.out.println(test.shuffle(a));
+        // String a = "abcdefghijklmnopqrstuvwxyz";
+        // System.out.println(test.shuffle(a));
+        // System.out.println(test.ran10());
+        // System.out.println(test.RanSort10());
+        // test.RandString();
+        System.out.println(test.RandString10());
     }
 }
