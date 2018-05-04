@@ -1,0 +1,28 @@
+@charset "ISO-8859-1";
+
+#wrapper{
+
+    margin: 0px auto;
+    text-align : center;
+    padding: 50px 0px;
+}
+
+.form{
+        width: 170px;
+        display: inline-block; 
+        border: 1px solid black;
+        margin: 20px;
+}
+#act{
+	margin: 0px auto;
+    width: 800px;
+	height: 400px;
+	border: 1px solid black;
+	overflow: scroll;
+}
+#red{
+	color:red;
+}
+#green{
+	color:green;
+}
