@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+
+#wrapper{
+    margin: 25px;
+    text-align : center;
+}
+
+#error{
+	color:red;
+}

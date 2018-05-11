@@ -1,0 +1,11 @@
+@charset "ISO-8859-1";
+
+#wrapper{
+	text-align : center;
+	margin: 25px auto;
+}
+
+#table{
+	width :500px;
+	margin: 0px auto;
+}
