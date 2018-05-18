@@ -13,7 +13,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="answers")
@@ -21,7 +23,8 @@ public class Answer {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-	@NotNull (message="Question cannot be empty")
+	@Column
+	@NotEmpty
     private String answer;
     @Column(updatable=false)
     private Date createdAt;

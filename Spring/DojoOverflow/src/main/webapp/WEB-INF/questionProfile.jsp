@@ -16,8 +16,11 @@
 </head>
 <body>
 <div id="wrapper">
-	<h1>Question goes here</h1>
-	<h2>Tags go here</h2>
+	<h1><c:out value="${ques.question}"/></h1>
+	<h4>Tags: </h4>
+	<c:forEach items = "${ tags }" var = "tag">
+		<td><p id="p"><c:out value="${tag.subject}"/></p></td>
+	</c:forEach>
 		<table id="table">
 		<thead>
 			<tr>
@@ -25,18 +28,20 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>Answers go here</td>
-			</tr>
+			<c:forEach var="answer" items="${ques.getAnswers()}">
+				<tr>
+					<td><c:out value="${answer.getAnswer()}"/></td>
+				</tr>
+			</c:forEach>
 		</tbody>
 	</table>
 	<h2>Add your answer</h2>
-	<form:form method="POST" action="" modelAttribute="">
-
-		<form:label path="answser">Answer:
-	    <form:input path="answser"/></form:label>
-	    <form:errors path="answser"/>
-	    
+	<form:form method="POST" action="/answer/add/${ ques.id }" modelAttribute="Answer">
+	
+		<form:label path="answer">Answer:
+	    <form:input path="answer"/></form:label>
+	    <form:errors path="answer"/><br>
+	  
 	    <input type="submit" value="Submit"/>
 	</form:form>
 </div>

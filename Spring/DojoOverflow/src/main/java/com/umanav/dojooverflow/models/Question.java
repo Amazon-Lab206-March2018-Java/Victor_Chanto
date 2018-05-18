@@ -40,7 +40,6 @@ public class Question {
     @OneToMany(mappedBy="question", fetch = FetchType.LAZY)
     private List<Answer> answers;
     
-    @Pattern(regexp = "[^,\\s][^\\,]*[^,\\s]*")
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
         name = "tags_questions", 

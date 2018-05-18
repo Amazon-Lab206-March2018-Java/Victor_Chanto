@@ -20,12 +20,11 @@
 	<form:form method="POST" action="/questions/new" modelAttribute="newquestion">
 		<form:label path="question"> Question<br>
 	    <form:input path="question"/></form:label>
-	    <form:errors path="question"/><br>
 	    
-   		<form:label path="tags"> Tags<br>
-	    <form:input path="tags"/></form:label>
-	    <form:errors path="tags"/><br>
-	    
+	    <label>Tags</label>
+		<input type="text" name="tagsGiven">
+		<br>
+	    <form:errors path="*"/><br>
 	    <input type="submit" value="Submit"/>
 	</form:form>
 </div>

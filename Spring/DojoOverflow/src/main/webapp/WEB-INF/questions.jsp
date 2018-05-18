@@ -25,10 +25,14 @@
 			</tr>
 		</thead>
 		<tbody>
+			<c:forEach items = "${ questions }" var = "question">
 			<tr>
-				<td><a href ="">question goes here</a></td>
-				<td><a href ="">Tags goes here</a></td>
+				<td><a href ="/questions/<c:out value = '${ question.id }'/>"><c:out value = '${ question.question }'/></a></td>
+				<td><c:forEach items = "${ question.tags }" var = "tags">
+					<c:out value="${tags.subject}"/>
+				</c:forEach></td>
 			</tr>
+			</c:forEach>
 		</tbody>
 	</table>
 	<a href ="/questions/new">New Question</a>
