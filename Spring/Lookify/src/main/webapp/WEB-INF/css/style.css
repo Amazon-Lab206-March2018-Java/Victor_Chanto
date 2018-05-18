@@ -9,3 +9,13 @@
 	width :500px;
 	margin: 0px auto;
 }
+
+.div{
+	display: inline-block;
+	text-align : center;
+	margin: 25px auto;
+}
+
+.container .reg{
+	margin: 25px auto;
+}	
